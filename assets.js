@@ -3,7 +3,8 @@ var assets_state = {
     this.game.stage.backgroundColor = '#ff1493';
     this.game.load.image('cat1','images/cat1.png');
     this.game.load.image('feather','images/feather.png');
-    this.game.load.image('dirt', 'images/dirt.jpg');
+    this.game.load.image('ground', 'images/ground.png');
+    this.game.load.image('block', 'images/block.png');
   },
 
   create: function() {

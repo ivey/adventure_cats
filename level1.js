@@ -10,14 +10,18 @@ var level_1 = {
     platforms = game.add.group();
     platforms.enableBody = true;
 
-    var ground = platforms.create(0, this.game.world.height - 62, 'dirt');
-    ground.scale.setTo(2, 2);
+    var ground = game.add.tileSprite(0, game.world.height - 64, game.world.width, 64, 'ground');
+    platforms.add(ground);
     ground.body.immovable = true;
 
-    var ledge = platforms.create(400, 350, 'dirt');
+    var ledge = game.add.tileSprite(game.world.width - 350, 335, 350, 70, 'block');
+    platforms.add(ledge);
     ledge.body.immovable = true;
-    ledge = platforms.create(-150, 170, 'dirt');
+    ledge = game.add.tileSprite(0, 135, 350, 70, 'block');
+    platforms.add(ledge);
     ledge.body.immovable = true;
+    // ledge = platforms.create(-150, 170, 'dirt');
+    // ledge.body.immovable = true;
 
     player = game.add.sprite(32, game.world.height - 190, 'cat1');
     game.physics.arcade.enable(player);
