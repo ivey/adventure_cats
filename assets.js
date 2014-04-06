@@ -1,7 +1,9 @@
 var assets_state = {
   preload: function() {
-    this.game.stage.backgroundColor = '#00f';
-    // this.game.load.image('key','path/');
+    this.game.stage.backgroundColor = '#ff1493';
+    this.game.load.image('cat1','images/cat1.png');
+    this.game.load.image('feather','images/feather.png');
+    this.game.load.image('dirt', 'images/dirt.jpg');
   },
 
   create: function() {

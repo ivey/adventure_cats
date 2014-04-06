@@ -1,4 +1,6 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game_div');
+var cursors;
+
 
 game.state.add('assets', assets_state);
 game.state.add('start', start_state);
