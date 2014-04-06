@@ -1,8 +1,7 @@
 var start_state = {
-  space_key: null,
   create: function() {
-    space_key = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-    space_key.onDown.add(this.start, this);
+    spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+    spacebar.onDown.add(this.start, this);
 
     var style = { font: "30px Arial", fill: "#ffffff" };
     var x = game.world.width/2, y = game.world.height/2;
@@ -11,7 +10,7 @@ var start_state = {
   },
 
   start: function() {
-    space_key.onDown.remove(this.start, this);
+    spacebar.onDown.remove(this.start, this);
     this.game.state.start("level_1");
   }
 
